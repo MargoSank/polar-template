@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -67,8 +68,8 @@
                     так как сами бегают полумарафоны, переплыли Босфор,
                     готовятся к соревнованиям по триатлону!
                 </div>
-                <div class="benefits__item">
-                    <img src="icons/advantages/heart.png" alt="heart">
+                <div class="benefits__item ">
+                    <img src="icons/advantages/heart.png" alt="heart" class="benefits__item_animated" >
                     <span>Заботимся о здоровье</span>
                     Мы работаем для того, чтобы Ваши занятия спортом шли на
                     пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -84,7 +85,7 @@
         </div>
     </section>
     <section class="consultation">
-        <div class="container">
+        <div class="container" id="consultation-form">
             <h2 class="consultation__header">
                 Получите бесплатную консультацию <br>
                 по подбору пульсометра
@@ -94,9 +95,9 @@
                 и мы перезвоним вам в течении 10 минут
             </div>
             <form class="feed-form" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
             </form>
@@ -429,7 +430,7 @@
         <div class="container">
             <h2 class="review__header"> отзывы клиентов </h2>
             <div class="review__wrapper">
-                <div class="review-item">
+                <div class="review-item animate__animated wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/feed_1.png" alt="client photo" class="review-item__img">
                     <div class="review-item__description">
                         <div class="review-item__title">Ирина Иванченко</div>
@@ -442,11 +443,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="review-item">
+                <div class="review-item animate__animated wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/feed_2.png" alt="client photo" class="review-item__img">
                     <div class="review-item__description">
                         <div class="review-item__title">Иван Сёмочкин</div>
-                        <div class="review-item__subtitle">1 полумарафона</div>
+                        <div class="re view-item__subtitle">1 полумарафона</div>
                         <div class="review-item__text">
                             Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.<br>
                             Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку,
@@ -456,7 +457,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="review-item">
+                <div class="review-item animate__animated wow animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <img src="./img/feed_3.png" alt="client photo" class="review-item__img">
                     <div class="review-item__description">
                         <div class="review-item__title">Юлия Дашкина</div>
@@ -501,8 +502,8 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__description">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
@@ -514,9 +515,9 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__description">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">купить</button>
             </form>
@@ -528,12 +529,20 @@
             <div class="modal__description">Наш менеджер свяжется с вами <br>в ближайшее время!</div>
         </div>
     </div>
+    <a href="#up" class="pageup">
+        <img src="./icons/up.svg" alt="up">
+    </a>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/tabs.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/tab.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

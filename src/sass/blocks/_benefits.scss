@@ -32,6 +32,16 @@
       font-size: 18px;
       color: $second-color;
     }
+    &_animated{
+      animation-name: heartbeat;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-delay: 2s, 2s;
+      animation-iteration-count: infinite;
+      &:hover{
+        animation-play-state: paused;
+      }
+    }
   }
   &__link {
     color: $main-color;

@@ -9,3 +9,9 @@ const slider = tns({
 document.querySelector('.next').addEventListener('click', () => slider.goTo('next'))
 
 document.querySelector('.prev').addEventListener('click', () => slider.goTo('prev'))
+
+// mask for phone inputs
+$(document).ready(function () {
+    $('input[name=phone]').mask("+7 (999) 999-999-99")
+});
+
